@@ -1,26 +1,33 @@
-# from constants import Constant
 from ICA import Ica
-from constants import Constant
-import numpy as np
+# from constants import Constant
+# import numpy as np
 
 if __name__ == "__main__":
 
     ica = Ica()
 
-    countries = ica.createCountries()
-
-    # for i in countries:
-    #     print(i.color)
+    ica.createCountries()
 
     ica.createEmpires()
 
     ica.absorb()
 
-    # print(ica.empires)
-    # for empire in ica.empires:
-    #     (empire.calcCost())
-    #     print(empire.cost)
-    # print(len(ica.colonies))
+    for empire in ica.empires:
+        print(empire.name, empire.cost)
+        print(empire.getImperialist().color)
+        for colony in empire.getColonies():
+            print(colony.color, colony.cost)
 
 
-    print("Here graph coloring...")
+
+    empire = ica.competition()
+    print()
+    print("Result {}" . format(empire.name))
+    print(empire.getImperialist().color)
+    for colony in empire.getColonies():
+        print(colony.color)
+    #
+    # print(ica.iteration)
+
+
+    # print("Here graph coloring...")
