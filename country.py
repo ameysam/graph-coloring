@@ -7,9 +7,6 @@ class Country:
 
     def calcCost(self):
         conflicts = Constant.RULE_MATRIX
-
-
-
         pass
 
 

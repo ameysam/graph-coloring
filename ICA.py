@@ -41,5 +41,14 @@ class Ica:
         return self.empires
 
 
+
     def absorb(self):
-        pass
+        for empire in self.empires:
+            colonies = empire.getColonies()
+            for i in range(len(colonies)):
+                colony = colonies[i]
+                if colony.cost < empire.imperialist.cost:
+                    empire.colonies.append(empire.imperialist)
+                    empire.imperialist = colony
+                    del empire.colonies[i]
+                    empire.calcCost()

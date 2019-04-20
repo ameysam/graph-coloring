@@ -14,10 +14,12 @@ if __name__ == "__main__":
 
     ica.createEmpires()
 
-    print(ica.empires)
-    for empire in ica.empires:
-        (empire.calcCost())
-        print(empire.cost)
+    ica.absorb()
+
+    # print(ica.empires)
+    # for empire in ica.empires:
+    #     (empire.calcCost())
+    #     print(empire.cost)
     # print(len(ica.colonies))
 
 
