@@ -74,6 +74,9 @@ class Ica:
 
         iter = 0
 
+        if empiresTotalCost[minimum_index] > 0:
+            print("Iterations: ")
+
         while empiresTotalCost[minimum_index] > 0:
             self.iteration(minimum_index, empiresTotalCost)
             empiresTotalCost = np.array([empire.calcCost() for empire in self.empires])

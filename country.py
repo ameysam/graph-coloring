@@ -19,3 +19,14 @@ class Country:
 
     def getCost(self):
         return self.cost
+
+    @property
+    def colorFa(self):
+        if self.color == [1, 0, 0]:
+            return "R"
+        elif self.color == [0, 1, 0]:
+            return "G"
+        else:
+            return "B"
+
+

@@ -1,5 +1,6 @@
 from ICA import Ica
 
+
 if __name__ == "__main__":
 
     ica = Ica()
@@ -12,9 +13,11 @@ if __name__ == "__main__":
 
     for empire in ica.empires:
         print(empire.name, empire.cost)
-        print(empire.getImperialist().color)
+        print(empire.getImperialist().colorFa)
         for colony in empire.getColonies():
-            print(colony.color, colony.cost)
+            print(colony.colorFa, colony.cost)
+
+    print()
 
 
 
@@ -22,9 +25,9 @@ if __name__ == "__main__":
 
     print()
     print("Result {}" . format(empire.name))
-    print(empire.getImperialist().color)
+    print(empire.getImperialist().colorFa)
     for colony in empire.getColonies():
-        print(colony.color)
+        print(colony.colorFa)
 
 
     print("Here graph coloring...")
