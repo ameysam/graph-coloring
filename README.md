@@ -1,6 +1,6 @@
 # Graph coloring by ICA
 
-## Idea: Color 10 nodes graph like as this demo
+## Idea: Colorize 10 nodes of a graph like as this demo
 ![alt text](https://raw.githubusercontent.com/ameysam/graph-coloring/master/_documents/10node_graph.png)
 ![alt text](https://raw.githubusercontent.com/ameysam/graph-coloring/master/_documents/10node_graph_colored.png)
 
