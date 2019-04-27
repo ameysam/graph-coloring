@@ -11,7 +11,7 @@ class Empire:
         self.cost = 0
         self.countries = []
         self.colonies = []
-        self.name = 'Empire_{}'.format(random.choices(string.ascii_uppercase, k=1))
+        self.name = ''.join(random.choices(string.ascii_uppercase, k=2))
 
     def calcCost(self):
         self.countries = self.getCountries()

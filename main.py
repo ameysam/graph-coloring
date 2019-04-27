@@ -12,11 +12,13 @@ if __name__ == "__main__":
     ica.absorb()
 
     for empire in ica.empires:
-        print(empire.name, empire.cost)
+        print("Empire_{}".format(empire.name), "Total cost: {}".format(empire.cost))
         print(empire.getImperialist().colorFa)
         for colony in empire.getColonies():
-            print(colony.colorFa, colony.cost)
+            print(colony.colorFa, "Cost: {}".format(colony.cost))
+        print()
 
+    print()
     print()
 
 
@@ -24,10 +26,9 @@ if __name__ == "__main__":
     empire = ica.competition()
 
     print()
-    print("Result {}" . format(empire.name))
+    print("*" * 100)
+    print("Winner ==========> Empire_{}" . format(empire.name))
     print(empire.getImperialist().colorFa)
     for colony in empire.getColonies():
         print(colony.colorFa)
 
-
-    print("Here graph coloring...")
