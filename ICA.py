@@ -41,10 +41,9 @@ class Ica:
             colony = colonies[i]
             imperialist = np.random.randint(0, Constant.EMPIRES_COUNT, 1)[0]
             empire = self.empires[imperialist]
-            if empire.coloniesCount() < 4:
+            if empire.coloniesCount() < 9:
                 empire.addColony(colony)
                 i += 1
-
 
         return self.empires
 
@@ -59,7 +58,10 @@ class Ica:
                     empire.colonies.append(empire.imperialist)
                     empire.imperialist = colony
                     del empire.colonies[i]
+
+
             empire.calcCost()
+
 
 
     def competition(self):

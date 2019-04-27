@@ -7,26 +7,27 @@ import numpy as np
 class Empire:
     def __init__(self, imperialist):
         self.imperialist = imperialist
-        self.costs = [0, 0, 0, 0, 0]
+        self.costs = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         self.cost = 0
         self.countries = []
         self.colonies = []
         self.name = 'Empire_{}'.format(random.choices(string.ascii_uppercase, k=1))
 
     def calcCost(self):
-        self.costs = [0, 0, 0, 0, 0]
         self.countries = self.getCountries()
+
+        costs = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
         for i in range(len(self.countries)):
             conflicts = Constant.RULE_MATRIX[i]
             for j in range(len(conflicts)):
                 if conflicts[j] == 1:
                     if self.countries[i].color == self.countries[j].color:
-                        self.costs[i] += 1
-            self.countries[i].updateCost(self.costs[i])
+                        costs[i] += 1
+            self.countries[i].updateCost(costs[i])
 
-        self.cost = sum(self.costs)
-        return self.cost
+        self.cost = sum(costs)
+        return  self.cost
 
     def getCheapestColony(self):
         empiresTotalCost = np.array([colony.getCost() for colony in self.colonies])

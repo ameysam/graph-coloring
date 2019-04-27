@@ -1,6 +1,4 @@
 from ICA import Ica
-# from constants import Constant
-# import numpy as np
 
 if __name__ == "__main__":
 
@@ -21,13 +19,12 @@ if __name__ == "__main__":
 
 
     empire = ica.competition()
+
     print()
     print("Result {}" . format(empire.name))
     print(empire.getImperialist().color)
     for colony in empire.getColonies():
         print(colony.color)
-    #
-    # print(ica.iteration)
 
 
-    # print("Here graph coloring...")
+    print("Here graph coloring...")

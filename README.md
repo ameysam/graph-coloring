@@ -1,7 +1,8 @@
 # Graph coloring by ICA
 
-## Convert left graph to right graph
-![alt text](https://raw.githubusercontent.com/ameysam/graph-coloring/master/demo.png)
+## Idea: Color 10 nodes graph like as this demo
+![alt text](https://raw.githubusercontent.com/ameysam/graph-coloring/master/_documents/10node_graph.png)
+![alt text](https://raw.githubusercontent.com/ameysam/graph-coloring/master/_documents/10node_graph_colored.png)
 
 ### Empires : list of colored graphs
 
